@@ -1,0 +1,23 @@
+<div class="container mt-3">
+    <table class="table table-bordered table-striped">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Firstname</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Details</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let contact of contacts">
+        <td><span>{{contact.id}}</span></td>
+        <td><span>{{contact.name}}</span></td>
+        <td><span>{{contact.email}}</span></td>
+        <td><span>{{contact.phone}}</span></td>
+        <td><h4><i class="bi bi-arrow-up-right-square" (click)="loadContact(contact)"></i></h4></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <contact *ngIf="loadContactCheck" [contactToLoad]="contactToLoad"></contact>
