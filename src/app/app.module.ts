@@ -7,6 +7,11 @@ import { AppComponent } from './app.component';
 import { ContactComponent } from './contact-list/contact/contact.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
+import { fakeBackendProvider } from './_helpers';
+import { ReactiveFormsModule } from '@angular/forms';
+import { authInterceptorProviders } from './_helpers/auth.interceptor';
 
 
 @NgModule({
@@ -14,14 +19,20 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     ContactComponent,
     ContactListComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    fakeBackendProvider,
+    authInterceptorProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
