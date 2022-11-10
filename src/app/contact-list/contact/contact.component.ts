@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Component, Input, OnChanges } from "@angular/core";
 import { Contact } from "../contact-list.component";
-import { UserService } from "../../user.service";
+import { UserService } from "../../_services/user.service";
 
 
 @Component({
@@ -11,7 +11,7 @@ import { UserService } from "../../user.service";
 })
 
 export class ContactComponent implements OnChanges{
-    @Input() contactToLoad : any = '';
+    @Input() contactToLoad : any;
 
     contact!: Contact; 
     constructor(

@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Component, OnInit, Output } from "@angular/core";
-import { UserService } from "../user.service";
+import { UserService } from "../_services/user.service";
 
 export interface Contact {
     id: number,
