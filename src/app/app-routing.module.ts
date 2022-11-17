@@ -4,11 +4,13 @@ import { ContactListComponent } from './contact-list/contact-list.component';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
+import { AddContactComponent } from './add-contact/add-contact.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'contacts/add', component: AddContactComponent },
   { path: 'contacts', component: ContactListComponent },
   { path: '**', redirectTo: '' }
 ];

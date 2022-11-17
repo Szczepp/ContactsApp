@@ -27,11 +27,31 @@ export class UserService {
       return this.token;
     }
   
+  getContact(contactId: number) {
+    return this.httpClient.get<any>('https://localhost:44335/api/contact/' + contactId);
+  }
+
   getContacts() {
     return this.httpClient.get<any>('https://localhost:44335/api/contact');
   }
-  getContact(contactId: number) {
-    return this.httpClient.get<any>('https://localhost:44335/api/contact/' + contactId);
+
+  addContact(contact: any) {
+    const jsonContact  = {
+      "name": contact.name,
+      "email": contact.email,
+      "password": contact.password,
+      "phone": contact.phone,
+      "dateOfBirth": contact.dateOfBirth,
+      "category": {
+        "id": contact.category
+      }
+    };
+        
+    return this.httpClient.post<any>('https://localhost:44335/api/contact/add', jsonContact);
+  }
+
+  getCategories() {
+    return this.httpClient.get<any>('https://localhost:44335/api/category');
   }
 
   login(username: string, password: string) {

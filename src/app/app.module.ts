@@ -12,6 +12,8 @@ import { RegisterComponent } from './register/register.component';
 import { fakeBackendProvider } from './_helpers';
 import { ReactiveFormsModule } from '@angular/forms';
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
+import { AddContactComponent } from './add-contact/add-contact.component';
+import { UpdateContactComponent } from './update-contact/update-contact.component';
 
 
 @NgModule({
@@ -19,9 +21,12 @@ import { authInterceptorProviders } from './_helpers/auth.interceptor';
     AppComponent,
     ContactComponent,
     ContactListComponent,
+    AddContactComponent,
     LoginComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    AddContactComponent,
+    UpdateContactComponent
   ],
   imports: [
     BrowserModule,
