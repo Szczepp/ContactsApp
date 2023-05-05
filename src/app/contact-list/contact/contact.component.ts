@@ -25,8 +25,8 @@ export class ContactComponent implements OnChanges{
     }
     getContact() {
         this.userService.getContact(this.contactToLoad.id).subscribe(response => {
-            console.log(response);
             this.contact = response;
+            console.log(this.contact);
         });
 
     }

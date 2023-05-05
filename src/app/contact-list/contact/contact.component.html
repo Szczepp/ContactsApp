@@ -9,6 +9,7 @@
         <th>Category</th>
         <th>Phone</th>
         <th>Date of birth</th>
+        <th>Action</th>
       </tr>
       </thead>
       <tbody>
@@ -17,9 +18,10 @@
         <td><span>{{contact.name}}</span></td>
         <td><span>{{contact.email}}</span></td>
         <td><span>{{contact.password}}</span></td>
-        <td><span>{{contact.category}}</span></td>
+        <td><span>{{contact.category.name}}</span></td>
         <td><span>{{contact.phone}}</span></td>
         <td><span>{{contact.dateOfBirth}}</span></td>
+        <td><span> <a routerLink="/contacts//update/{{contact.id}}"> Update </a> </span></td>
       </tr>
       </tbody>
     </table>

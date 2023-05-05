@@ -11,10 +11,10 @@
       </thead>
       <tbody>
       <tr *ngFor="let contact of contacts">
-        <td><span>{{contact.id}}</span></td>
-        <td><span>{{contact.name}}</span></td>
-        <td><span>{{contact.email}}</span></td>
-        <td><span>{{contact.phone}}</span></td>
+        <td><span>{{contact?.id}}</span></td>
+        <td><span>{{contact?.name}}</span></td>
+        <td><span>{{contact?.email}}</span></td>
+        <td><span>{{contact?.phone}}</span></td>
         <td><h4><i class="bi bi-arrow-up-right-square" (click)="loadContact(contact)"></i></h4></td>
       </tr>
       </tbody>
